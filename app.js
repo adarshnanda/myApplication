@@ -1,15 +1,3 @@
-function placeOrder(orderNumber){
-	console.log('Customer order placed with number ', orderNumber);
-	cookAndDeliver(function(){
-		console.log('deliver food', orderNumber);
-	});
-}
+var timeout = require('./setTimeout');
 
-function cookAndDeliver(callBack){
-	setTimeout(callBack, 5000);
-}
-
-placeOrder(1);
-placeOrder(2);
-placeOrder(3);
-placeOrder(4);
+timeout.placeOrder(2);
