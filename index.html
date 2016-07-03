@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html ng-app="myApp" ng-controller="firstCtrl">
+<html ng-app="myApp" ng-controller="firstCtrl as ctrl">
 <head>
 	<title>My First Angular page</title>
 	<script type="text/javascript" src="angular.js"></script>
@@ -10,8 +10,13 @@
 	<h1>My First Angular page</h1>
 	<div>
 <p>Input something in the input box:</p>
-<p>Numer : <input type="number" ng-model="number" placeholder="enter a number" ng-change="incr()"></p>
-<h1> <span ng-bind="number"></span> plus 1 = <span ng-bind="number1"></span> </h1>
+<p>Numer : <input type="number" ng-model="ctrl.number" placeholder="enter a number" ng-change="ctrl.incr()"></p>
+<div ng-if="ctrl.number && ctrl.number1">
+	<h1> <span ng-bind="ctrl.number"></span> + 1 = <span ng-bind="ctrl.number1"></span> </h1>
+</div>
+<div ng-if="!(ctrl.number && ctrl.number1)">
+	<h1> <span> your input goes here</span> + 1 = <span>output comes here</span> </h1>
+</div>
 
 </div>
 </body>

@@ -1,12 +1,13 @@
 var  myApp = angular.module("myApp", ["myApp2"]);
-myApp.controller('firstCtrl', function ($scope, NUMBER) {
+myApp.controller('firstCtrl', function (NUMBER) {
 	console.log('controller loaded');
+	var self = this;
 	init();
 	function init(){
-		$scope.number1 = 1;
-		$scope.number = 1;
+		self.number1 = undefined;
+		self.number = undefined;
 	}
-	$scope.incr = function () {
-	$scope.number1 = $scope.number + NUMBER.ONE;
+	self.incr = function () {
+	self.number1 = self.number + NUMBER.ONE;
 	};
 });
