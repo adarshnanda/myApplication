@@ -1,5 +1,5 @@
-var  myApp = angular.module("myApp", ["myApp2"]);
-myApp.controller('firstCtrl', function (NUMBER) {
+angular.module('myApp',['myApp.controllers']);
+angular.module("myApp.controllers", ['myApp.constant']).controller('firstCtrl', function (NUMBER) {
 	console.log('controller loaded');
 	var self = this;
 	init();
