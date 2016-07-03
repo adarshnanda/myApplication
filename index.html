@@ -1,17 +1,17 @@
 <!DOCTYPE html>
-<html>
+<html ng-app="myApp" ng-controller="firstCtrl">
 <head>
 	<title>My First Angular page</title>
 	<script type="text/javascript" src="angular.js"></script>
 	<script type="text/javascript" src="app.js"></script>
 	<script type="text/javascript" src="app1.js"></script>
 </head>
-<body ng-app="myApp" ng-controller="firstCtrl">
+<body>
 	<h1>My First Angular page</h1>
 	<div>
 <p>Input something in the input box:</p>
-<p>Name : <input type="text" ng-model="name" placeholder="Enter name here"></p>
-<h1>Hello <span ng-bind="name"></span> </h1>
+<p>Numer : <input type="number" ng-model="number" placeholder="enter a number" ng-change="incr()"></p>
+<h1> <span ng-bind="number"></span> plus 1 = <span ng-bind="number1"></span> </h1>
 
 </div>
 </body>
