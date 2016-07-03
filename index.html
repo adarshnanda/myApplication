@@ -2,13 +2,12 @@
 <html>
 <head>
 	<title>My First Angular page</title>
-	<!-- <script src="D:\codes\myRepository\myApplication\node_modules\angular\angular.js"></script> -->
-	<script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.5.6/angular.js"></script>
+	<script type="text/javascript" src="angular.js"></script>
+	<script type="text/javascript" src="app.js"></script>
 </head>
-<body>
+<body ng-app="myApp">
 	<h1>My First Angular page</h1>
-	<div ng-app="myapp">
- <a href="404.html">click</a>
+	<div>
 <p>Input something in the input box:</p>
 <p>Name : <input type="text" ng-model="name" placeholder="Enter name here"></p>
 <h1>Hello <span ng-bind="name"></span> </h1>

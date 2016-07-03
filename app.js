@@ -1,3 +1,1 @@
-var timeout = require('./setTimeout');
-
-timeout.placeOrder(2);
+var  myApp = angular.module("myApp", []);
