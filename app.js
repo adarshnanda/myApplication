@@ -4,13 +4,16 @@ angular.module("myApp.controllers", ['myApp.constant', 'myApp.services'])
 	var self = this;
 	init();
 	function init(){
-		self.number1 = undefined;
-		self.number = undefined;
+		self.secondInput = NUMBER.und;
+		self.firstInput = NUMBER.und;
+	}
+	self.nullable = function(argument){
+		return commonUtils.nullable(argument);
 	}
 	self.nullable = function(argument){
 		return commonUtils.nullable(argument);
 	}
 	self.incr = function () {
-	self.number1 = self.number + NUMBER.ONE;
+	self.sum = self.firstInput + self.secondInput;
 	};
 });
