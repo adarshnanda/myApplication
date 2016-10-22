@@ -11,12 +11,13 @@
 	<h1>My First Angular page</h1>
 	<div>
 <p>Input something in the input box:</p>
-<p>Numer : <input type="number" ng-model="ctrl.number" placeholder="enter a number" ng-change="ctrl.incr()"></p>
-<div ng-if="ctrl.nullable(ctrl.number) && ctrl.nullable(ctrl.number1)">
-	<h1> <span ng-bind="ctrl.number"></span> + 1 = <span ng-bind="ctrl.number1"></span> </h1>
+<p>Numer : <input type="number" ng-model="ctrl.firstInput" placeholder="enter a number" ng-change="ctrl.incr()"></p>
+<p>Numer : <input type="number" ng-model="ctrl.secondInput" placeholder="enter a number" ng-change="ctrl.incr()"></p>
+<div ng-if="ctrl.nullable(ctrl.firstInput) && ctrl.nullable(ctrl.secondInput)">
+	<h1> <span ng-bind="ctrl.firstInput"></span> + <span ng-bind="ctrl.secondInput"></span> = <span ng-bind="ctrl.sum"></span> </h1>
 </div>
-<div ng-if="!(ctrl.nullable(ctrl.number) && ctrl.nullable(ctrl.number1))">
-	<h1> <span> your input goes here</span> + 1 = <span>output comes here</span> </h1>
+<div ng-if="!(ctrl.nullable(ctrl.firstInput) && ctrl.nullable(ctrl.secondInput))">
+	<h1> <span> your first input goes here</span> + <span>your second input goes here</span> = <span>output comes here</span> </h1>
 </div>
 
 </div>
