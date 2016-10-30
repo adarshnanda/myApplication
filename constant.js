@@ -1,4 +1,5 @@
-angular.module('myApp.constant', []).constant('NUMBER',{
+angular.module('myApp.constant', []).constant('CONSTANTS',{
 'ONE':1,
-'und':undefined
+'und':undefined,
+'PLUS': '+'
 });
